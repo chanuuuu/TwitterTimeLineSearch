@@ -24,7 +24,7 @@
 @protocol WebServiceClientDelegate <NSObject>
 
 @optional
--(void)webServiceClient:(WebServiceClient *)client didUpdateWithImage:(id)data;
+-(void)webServiceClient:(WebServiceClient *)client didUpdateWithImage:(id)data ForText: (NSString *) text;
 -(void)webServiceClient:(WebServiceClient *)client didFailWithError:(NSError *)error;
 
 @end

@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="282.5" y="303.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Timeline-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                                                             <animations/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Sample Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBr-8w-g3p">
-                                                            <rect key="frame" x="180" y="35" width="175" height="20"/>
+                                                            <rect key="frame" x="180" y="35" width="175" height="19.5"/>
                                                             <animations/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -126,8 +126,17 @@
                             <constraint firstItem="VQv-gn-qK8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ww8-id-XFb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Timeline" id="ZQu-WW-JL6">
+                        <barButtonItem key="rightBarButtonItem" title="Sort(A-Z)" id="GNE-1O-YJX">
+                            <connections>
+                                <action selector="sort:" destination="BYZ-38-t0r" id="dUK-Bh-7CJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="sortOutlet" destination="GNE-1O-YJX" id="zXH-4Q-42n"/>
                         <outlet property="tableView" destination="VQv-gn-qK8" id="Qek-9B-190"/>
                     </connections>
                 </viewController>

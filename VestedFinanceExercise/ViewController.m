@@ -8,16 +8,16 @@
 
 #import "ViewController.h"
 #import "CustomTableCell.h"
-#import "Tweet.h"
-#import "TweetsSet.h"
 #import "STTwitter.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 {
-    //TweetsSet *tweetsArray;
-    NSMutableArray *tweetsArray;
-    NSMutableArray *imagesArray;
+    //NSMutableArray *tweetsArray;
+    //NSMutableArray *imagesArray;
+    
+    NSMutableArray *timelineArray;
     WebServiceClient *wClient;
+    UIActivityIndicatorView *spinner;
 }
 @property (strong, nonatomic) NSArray *twitterData;
 
@@ -27,10 +27,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     wClient = [WebServiceClient sharedWebServiceClient];
     wClient.delegate = self;
     
-    imagesArray = [[NSMutableArray alloc] init];
+    spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    spinner.frame = CGRectMake(0, 0, 24, 24);
+    
+    //imagesArray = [[NSMutableArray alloc] init];
+    timelineArray = [[NSMutableArray alloc] init];
     [self getTweets];
     
 }
@@ -43,7 +48,17 @@
     [twitter verifyCredentialsWithSuccessBlock:^(NSString *userName)
      {
          [twitter getUserTimelineWithScreenName:_username count:10 successBlock:^(NSArray *statuses) {
-             tweetsArray = [NSMutableArray arrayWithArray:statuses];
+             //tweetsArray = [NSMutableArray arrayWithArray:statuses];
+             
+             for(int i=0; i<statuses.count; i++)
+             {
+                 NSDictionary *tempDict1 = statuses[i];
+                 NSMutableDictionary *tempDict2 = [[NSMutableDictionary alloc] init];
+                 [tempDict2 setValue:tempDict1[@"text"] forKey:@"tweet"];
+                 [timelineArray addObject:tempDict2];
+                 
+             }
+             
              [self getImages];
              [self.tableView reloadData];
              
@@ -60,16 +75,16 @@
 
 - (void) getImages
 {
-    for(int i=0; i < tweetsArray.count; i++)
+    for(int i=0; i < timelineArray.count; i++)
     {
-        NSDictionary *resDict = tweetsArray[i];
-        [wClient retrieveImage:resDict[@"text"]];
+        NSDictionary *resDict = timelineArray[i];
+        [wClient retrieveImage:resDict[@"tweet"]];
     }
 }
 
 
 
-- (void)webServiceClient:(WebServiceClient *)client didUpdateWithImage:(id) data
+- (void)webServiceClient:(WebServiceClient *)client didUpdateWithImage:(id) data ForText:(NSString *)text
 {
     NSArray *tempArray = [[data valueForKey:@"responseData"] valueForKey:@"results"];
     if(tempArray.count>0)
@@ -78,13 +93,25 @@
     NSString *url = [tempDict valueForKey:@"url"];
     if(url)
     {
-    [imagesArray addObject: url];
-    //[self.tableView reloadData];
-    int row = [imagesArray indexOfObject:url];
-    NSIndexPath * indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        //[imagesArray addObject: url];
+        
+        for(NSDictionary *tDict in timelineArray)
+        {
+            if([[tDict valueForKey:@"tweet"] isEqualToString:text])
+            {
+                [tDict setValue:url forKey:@"url"];
+                NSLog(@"Dict value: %@", tDict);
+            }
+        }
+        
+        
+    [self.tableView reloadData];
+    //int row = [imagesArray indexOfObject:url];
+    //NSIndexPath * indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    //[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
         
     }
+
     }
     
 }
@@ -115,7 +142,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return tweetsArray.count;
+    return  timelineArray.count;   //tweetsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -123,29 +150,51 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell" forIndexPath:indexPath];
     CustomTableCell *cCell = (CustomTableCell *) cell;
     
-    NSInteger idx = indexPath.row;
-    NSDictionary *t = tweetsArray[idx];
+    //cCell.imageOutlet.accessoryView = spinner;
+    //[spinner startAnimating];
     
-    cCell.labelOutlet.text = t[@"text"];
+//    NSInteger idx = indexPath.row;
+//    NSDictionary *t = tweetsArray[idx];
     
-    if(imagesArray.count == 0)
+    cCell.labelOutlet.text = [timelineArray[indexPath.row] valueForKey:@"tweet"];              //t[@"text"];
+    
+//    if(imagesArray.count == 0)
+//    {
+//       cCell.imageOutlet.image = [UIImage imageNamed:@"placeholder1.jpg"];
+//    }
+    
+    if([timelineArray[indexPath.row] valueForKey:@"url"])                                      //(indexPath.row < [imagesArray count])
     {
-       cCell.imageOutlet.image = [UIImage imageNamed:@"placeholder1.jpg"];
-    }
-    
-    if(indexPath.row < [imagesArray count])
-    {
-        NSURL *url = [NSURL URLWithString:imagesArray[indexPath.row]];
+        NSURL *url = [NSURL URLWithString:[timelineArray[indexPath.row] valueForKey:@"url"]]; //[NSURL URLWithString:imagesArray[indexPath.row]];
         NSData *data = [NSData dataWithContentsOfURL:url];
         cCell.imageOutlet.image = [[UIImage alloc] initWithData:data];
        
+    }
+    
+    else {
+        cCell.imageOutlet.image = [UIImage imageNamed:@"placeholder1.jpg"];
     }
     
     return cell;
 }
 
 
+- (IBAction)sort:(id)sender {
+    
+    _sortOutlet.title = [_sortOutlet.title isEqualToString:@"Sort(A-Z)"] ? @"Sort(Recent)" : @"Sort(A-Z)";
+    if([_sortOutlet.title isEqualToString:@"Sort(A-Z)"])
+    {
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"tweet" ascending:YES];
+        NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+        [timelineArray sortUsingDescriptors:sortDescriptors];
+    }
+    else {
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"url" ascending:YES];
+        NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+        [timelineArray sortUsingDescriptors:sortDescriptors];
+    }
+    
+    [self.tableView reloadData];
 
-
-
+}
 @end

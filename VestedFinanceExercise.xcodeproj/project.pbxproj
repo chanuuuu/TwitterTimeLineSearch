@@ -150,6 +150,7 @@
 		25D54DB61BC897CC0079F282 /* VestedFinanceExercise */ = {
 			isa = PBXGroup;
 			children = (
+				25AE17591BC99BEF0059E2E5 /* WebService */,
 				25D54DBD1BC897CC0079F282 /* ViewController.h */,
 				25D54DBE1BC897CC0079F282 /* ViewController.m */,
 				259A37D71BC9FEA300383321 /* TimelineRetrievalViewController.h */,
@@ -157,7 +158,6 @@
 				25D54DED1BC89F8F0079F282 /* CustomTableCell.h */,
 				25D54DEE1BC89F8F0079F282 /* CustomTableCell.m */,
 				25D54DC01BC897CC0079F282 /* Main.storyboard */,
-				25AE17591BC99BEF0059E2E5 /* WebService */,
 				25D54DC61BC897CC0079F282 /* Assets.xcassets */,
 				25D54DC81BC897CC0079F282 /* LaunchScreen.storyboard */,
 				25D54DF01BC8D6820079F282 /* placeholder1.jpg */,

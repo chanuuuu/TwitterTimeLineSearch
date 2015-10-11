@@ -13,5 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSString *username;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sortOutlet;
+- (IBAction)sort:(id)sender;
+
 @end
 

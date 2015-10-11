@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-webServiceClient:didUpdateWithImage:"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "-webServiceClient:didUpdateWithImage:ForText:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,12 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-webServiceClient:didUpdateWithImage:"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-webServiceClient:didUpdateWithImage:ForText:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-webServiceClient:didUpdateWithImage:"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-webServiceClient:didUpdateWithImage:ForText:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "-webServiceClient:didUpdateWithImage:"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-webServiceClient:didUpdateWithImage:ForText:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +186,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VestedFinanceExercise/ViewController.m"
+            timestampString = "466280766.572513"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,12 +218,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-webServiceClient:didUpdateWithImage:ForText:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -218,12 +234,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VestedFinanceExercise/ViewController.m"
-            timestampString = "466269428.604932"
+            timestampString = "466280766.572513"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-webServiceClient:didUpdateWithImage:"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-webServiceClient:didUpdateWithImage:ForText:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VestedFinanceExercise/ViewController.m"
+            timestampString = "466280923.200436"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-getImages"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VestedFinanceExercise/ViewController.m"
+            timestampString = "466281539.711372"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-getImages"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

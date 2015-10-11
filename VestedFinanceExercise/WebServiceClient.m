@@ -53,8 +53,8 @@ NSMutableArray *resultArray;
       success:^(NSURLSessionDataTask *task, id responseObject) {
           //NSLog(@"JSON: %@", responseObject);
           
-          if ([self.delegate respondsToSelector:@selector(webServiceClient:didUpdateWithImage:)]) {
-              [self.delegate webServiceClient:self didUpdateWithImage:responseObject];
+          if ([self.delegate respondsToSelector:@selector(webServiceClient:didUpdateWithImage: ForText:)]) {
+              [self.delegate webServiceClient:self didUpdateWithImage:responseObject ForText:text];
               
           }
           
