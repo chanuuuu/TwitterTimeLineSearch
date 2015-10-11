@@ -55,6 +55,13 @@
                  NSDictionary *tempDict1 = statuses[i];
                  NSMutableDictionary *tempDict2 = [[NSMutableDictionary alloc] init];
                  [tempDict2 setValue:tempDict1[@"text"] forKey:@"tweet"];
+                 
+                 NSDateFormatter *dateFormatter= [NSDateFormatter new];
+                 dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+                 [dateFormatter setDateFormat:@"EEE MMM dd HH:mm:ss Z yyyy"];
+                 NSDate *date = [dateFormatter dateFromString:tempDict1[@"created_at"]];
+                 [tempDict2 setValue:date forKey:@"createdAt"];
+                 
                  [timelineArray addObject:tempDict2];
                  
              }
@@ -106,6 +113,7 @@
         
         
     [self.tableView reloadData];
+    //[spinner stopAnimating];
     //int row = [imagesArray indexOfObject:url];
     //NSIndexPath * indexPath = [NSIndexPath indexPathForRow:row inSection:0];
     //[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
@@ -150,8 +158,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableCell" forIndexPath:indexPath];
     CustomTableCell *cCell = (CustomTableCell *) cell;
     
-    //cCell.imageOutlet.accessoryView = spinner;
-    //[spinner startAnimating];
+    //cCell.accessoryView = spinner;
+    [cCell addSubview:spinner];
+    [spinner startAnimating];
     
 //    NSInteger idx = indexPath.row;
 //    NSDictionary *t = tweetsArray[idx];
@@ -168,6 +177,7 @@
         NSURL *url = [NSURL URLWithString:[timelineArray[indexPath.row] valueForKey:@"url"]]; //[NSURL URLWithString:imagesArray[indexPath.row]];
         NSData *data = [NSData dataWithContentsOfURL:url];
         cCell.imageOutlet.image = [[UIImage alloc] initWithData:data];
+        [spinner stopAnimating];
        
     }
     
@@ -181,18 +191,20 @@
 
 - (IBAction)sort:(id)sender {
     
-    _sortOutlet.title = [_sortOutlet.title isEqualToString:@"Sort(A-Z)"] ? @"Sort(Recent)" : @"Sort(A-Z)";
+    
     if([_sortOutlet.title isEqualToString:@"Sort(A-Z)"])
     {
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"tweet" ascending:YES];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"tweet" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
         NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
         [timelineArray sortUsingDescriptors:sortDescriptors];
     }
     else {
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"url" ascending:YES];
-        NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"createdAt" ascending:NO];
+        NSMutableArray *sortDescriptors = [NSMutableArray arrayWithObject:sortDescriptor];
         [timelineArray sortUsingDescriptors:sortDescriptors];
     }
+    
+    _sortOutlet.title = [_sortOutlet.title isEqualToString:@"Sort(A-Z)"] ? @"Sort(Recent)" : @"Sort(A-Z)";
     
     [self.tableView reloadData];
 
