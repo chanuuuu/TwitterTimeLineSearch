@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebServiceClient.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, WebServiceClientDelegate>
 
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSString *username;
 @end
 

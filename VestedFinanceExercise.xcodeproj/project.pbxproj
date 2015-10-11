@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		259A37D91BC9FEA300383321 /* TimelineRetrievalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 259A37D81BC9FEA300383321 /* TimelineRetrievalViewController.m */; settings = {ASSET_TAGS = (); }; };
+		25AE17581BC99BDB0059E2E5 /* WebServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 25AE17571BC99BDB0059E2E5 /* WebServiceClient.m */; settings = {ASSET_TAGS = (); }; };
+		25AE175B1BC9E8200059E2E5 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AE175A1BC9E8200059E2E5 /* Accounts.framework */; };
+		25AE175D1BC9E8370059E2E5 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AE175C1BC9E8370059E2E5 /* Twitter.framework */; };
+		25AE175F1BC9E84C0059E2E5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25AE175E1BC9E84C0059E2E5 /* Social.framework */; };
 		25D54DB91BC897CC0079F282 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D54DB81BC897CC0079F282 /* main.m */; };
 		25D54DBC1BC897CC0079F282 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D54DBB1BC897CC0079F282 /* AppDelegate.m */; };
 		25D54DBF1BC897CC0079F282 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D54DBE1BC897CC0079F282 /* ViewController.m */; };
@@ -16,6 +21,9 @@
 		25D54DCA1BC897CC0079F282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D54DC81BC897CC0079F282 /* LaunchScreen.storyboard */; };
 		25D54DD51BC897CD0079F282 /* VestedFinanceExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D54DD41BC897CD0079F282 /* VestedFinanceExerciseTests.m */; };
 		25D54DE01BC897CD0079F282 /* VestedFinanceExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D54DDF1BC897CD0079F282 /* VestedFinanceExerciseUITests.m */; };
+		25D54DEF1BC89F8F0079F282 /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 25D54DEE1BC89F8F0079F282 /* CustomTableCell.m */; settings = {ASSET_TAGS = (); }; };
+		25D54DF11BC8D6820079F282 /* placeholder1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25D54DF01BC8D6820079F282 /* placeholder1.jpg */; settings = {ASSET_TAGS = (); }; };
+		FC13526D98E2FC1CF1031E98 /* libPods-VestedFinanceExercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEBDE084404B5C11570A8CE /* libPods-VestedFinanceExercise.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		259A37D71BC9FEA300383321 /* TimelineRetrievalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineRetrievalViewController.h; sourceTree = "<group>"; };
+		259A37D81BC9FEA300383321 /* TimelineRetrievalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineRetrievalViewController.m; sourceTree = "<group>"; };
+		25AE17561BC99BDB0059E2E5 /* WebServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceClient.h; sourceTree = "<group>"; };
+		25AE17571BC99BDB0059E2E5 /* WebServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceClient.m; sourceTree = "<group>"; };
+		25AE175A1BC9E8200059E2E5 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		25AE175C1BC9E8370059E2E5 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		25AE175E1BC9E84C0059E2E5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		25D54DB41BC897CC0079F282 /* VestedFinanceExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VestedFinanceExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D54DB81BC897CC0079F282 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		25D54DBA1BC897CC0079F282 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +68,12 @@
 		25D54DDB1BC897CD0079F282 /* VestedFinanceExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VestedFinanceExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25D54DDF1BC897CD0079F282 /* VestedFinanceExerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VestedFinanceExerciseUITests.m; sourceTree = "<group>"; };
 		25D54DE11BC897CD0079F282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25D54DED1BC89F8F0079F282 /* CustomTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
+		25D54DEE1BC89F8F0079F282 /* CustomTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
+		25D54DF01BC8D6820079F282 /* placeholder1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder1.jpg; sourceTree = "<group>"; };
+		6AEBDE084404B5C11570A8CE /* libPods-VestedFinanceExercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VestedFinanceExercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		726CB7FF20E0BA8BDCB8198E /* Pods-VestedFinanceExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VestedFinanceExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-VestedFinanceExercise/Pods-VestedFinanceExercise.release.xcconfig"; sourceTree = "<group>"; };
+		B7BB17036279321AF21DFB1F /* Pods-VestedFinanceExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VestedFinanceExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VestedFinanceExercise/Pods-VestedFinanceExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25AE175F1BC9E84C0059E2E5 /* Social.framework in Frameworks */,
+				25AE175D1BC9E8370059E2E5 /* Twitter.framework in Frameworks */,
+				25AE175B1BC9E8200059E2E5 /* Accounts.framework in Frameworks */,
+				FC13526D98E2FC1CF1031E98 /* libPods-VestedFinanceExercise.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +105,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		026A099FF092F252501BA1B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25AE175E1BC9E84C0059E2E5 /* Social.framework */,
+				25AE175C1BC9E8370059E2E5 /* Twitter.framework */,
+				25AE175A1BC9E8200059E2E5 /* Accounts.framework */,
+				6AEBDE084404B5C11570A8CE /* libPods-VestedFinanceExercise.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25AE17591BC99BEF0059E2E5 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				25AE17561BC99BDB0059E2E5 /* WebServiceClient.h */,
+				25AE17571BC99BDB0059E2E5 /* WebServiceClient.m */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
 		25D54DAB1BC897CC0079F282 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +132,8 @@
 				25D54DD31BC897CD0079F282 /* VestedFinanceExerciseTests */,
 				25D54DDE1BC897CD0079F282 /* VestedFinanceExerciseUITests */,
 				25D54DB51BC897CC0079F282 /* Products */,
+				2A0EFFFED4E8B87F65783859 /* Pods */,
+				026A099FF092F252501BA1B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,15 +150,17 @@
 		25D54DB61BC897CC0079F282 /* VestedFinanceExercise */ = {
 			isa = PBXGroup;
 			children = (
-				25D54DBA1BC897CC0079F282 /* AppDelegate.h */,
-				25D54DBB1BC897CC0079F282 /* AppDelegate.m */,
 				25D54DBD1BC897CC0079F282 /* ViewController.h */,
 				25D54DBE1BC897CC0079F282 /* ViewController.m */,
+				259A37D71BC9FEA300383321 /* TimelineRetrievalViewController.h */,
+				259A37D81BC9FEA300383321 /* TimelineRetrievalViewController.m */,
+				25D54DED1BC89F8F0079F282 /* CustomTableCell.h */,
+				25D54DEE1BC89F8F0079F282 /* CustomTableCell.m */,
 				25D54DC01BC897CC0079F282 /* Main.storyboard */,
+				25AE17591BC99BEF0059E2E5 /* WebService */,
 				25D54DC61BC897CC0079F282 /* Assets.xcassets */,
 				25D54DC81BC897CC0079F282 /* LaunchScreen.storyboard */,
-				25D54DCB1BC897CC0079F282 /* Info.plist */,
-				25D54DC31BC897CC0079F282 /* VestedFinanceExercise.xcdatamodeld */,
+				25D54DF01BC8D6820079F282 /* placeholder1.jpg */,
 				25D54DB71BC897CC0079F282 /* Supporting Files */,
 			);
 			path = VestedFinanceExercise;
@@ -120,6 +169,10 @@
 		25D54DB71BC897CC0079F282 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				25D54DBA1BC897CC0079F282 /* AppDelegate.h */,
+				25D54DBB1BC897CC0079F282 /* AppDelegate.m */,
+				25D54DCB1BC897CC0079F282 /* Info.plist */,
+				25D54DC31BC897CC0079F282 /* VestedFinanceExercise.xcdatamodeld */,
 				25D54DB81BC897CC0079F282 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -143,6 +196,15 @@
 			path = VestedFinanceExerciseUITests;
 			sourceTree = "<group>";
 		};
+		2A0EFFFED4E8B87F65783859 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7BB17036279321AF21DFB1F /* Pods-VestedFinanceExercise.debug.xcconfig */,
+				726CB7FF20E0BA8BDCB8198E /* Pods-VestedFinanceExercise.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25D54DE41BC897CD0079F282 /* Build configuration list for PBXNativeTarget "VestedFinanceExercise" */;
 			buildPhases = (
+				C2CA5DC4305513AB3646A609 /* Check Pods Manifest.lock */,
 				25D54DB01BC897CC0079F282 /* Sources */,
 				25D54DB11BC897CC0079F282 /* Frameworks */,
 				25D54DB21BC897CC0079F282 /* Resources */,
+				E23A880F52195CE81C9405D4 /* Embed Pods Frameworks */,
+				A2162EB6F3BA54749E16404A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +314,7 @@
 				25D54DCA1BC897CC0079F282 /* LaunchScreen.storyboard in Resources */,
 				25D54DC71BC897CC0079F282 /* Assets.xcassets in Resources */,
 				25D54DC21BC897CC0079F282 /* Main.storyboard in Resources */,
+				25D54DF11BC8D6820079F282 /* placeholder1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,13 +334,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A2162EB6F3BA54749E16404A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VestedFinanceExercise/Pods-VestedFinanceExercise-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2CA5DC4305513AB3646A609 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E23A880F52195CE81C9405D4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VestedFinanceExercise/Pods-VestedFinanceExercise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25D54DB01BC897CC0079F282 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259A37D91BC9FEA300383321 /* TimelineRetrievalViewController.m in Sources */,
 				25D54DBF1BC897CC0079F282 /* ViewController.m in Sources */,
 				25D54DC51BC897CC0079F282 /* VestedFinanceExercise.xcdatamodeld in Sources */,
+				25D54DEF1BC89F8F0079F282 /* CustomTableCell.m in Sources */,
+				25AE17581BC99BDB0059E2E5 /* WebServiceClient.m in Sources */,
 				25D54DBC1BC897CC0079F282 /* AppDelegate.m in Sources */,
 				25D54DB91BC897CC0079F282 /* main.m in Sources */,
 			);
@@ -413,6 +530,7 @@
 		};
 		25D54DE51BC897CD0079F282 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7BB17036279321AF21DFB1F /* Pods-VestedFinanceExercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VestedFinanceExercise/Info.plist;
@@ -424,6 +542,7 @@
 		};
 		25D54DE61BC897CD0079F282 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 726CB7FF20E0BA8BDCB8198E /* Pods-VestedFinanceExercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VestedFinanceExercise/Info.plist;
@@ -500,6 +619,7 @@
 				25D54DE61BC897CD0079F282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25D54DE71BC897CD0079F282 /* Build configuration list for PBXNativeTarget "VestedFinanceExerciseTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +628,7 @@
 				25D54DE91BC897CD0079F282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25D54DEA1BC897CD0079F282 /* Build configuration list for PBXNativeTarget "VestedFinanceExerciseUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +637,7 @@
 				25D54DEC1BC897CD0079F282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
