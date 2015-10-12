@@ -15,7 +15,9 @@ static NSString * const BaseURLString = @"https://ajax.googleapis.com/ajax/servi
 NSMutableArray *resultArray;
 
 
-//provides access to singleton object of the class
+/**
+ provides access to singleton object of the class
+ */
 + (WebServiceClient *)sharedWebServiceClient
 {
     static WebServiceClient *_sharedWebServiceClient = nil;
@@ -28,7 +30,9 @@ NSMutableArray *resultArray;
     return _sharedWebServiceClient;
 }
 
-// Initializes the object with prolific web service base url
+/**
+ Initializes the object with google web service base url
+ */
 - (instancetype)initWithBaseURL:(NSURL *)url
 {
     self = [super initWithBaseURL:url];
@@ -41,7 +45,9 @@ NSMutableArray *resultArray;
     return self;
 }
 
-// Retrieves All books from Prolific WebService -- request to GET /books
+/**
+ Retrieves Image from Google WebService URL
+ */
 - (void) retrieveImage:(NSString *) text {
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];

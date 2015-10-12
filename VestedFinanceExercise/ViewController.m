@@ -31,8 +31,6 @@
     wClient = [WebServiceClient sharedWebServiceClient];
     wClient.delegate = self;
     
-    spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    spinner.frame = CGRectMake(0, 0, 24, 24);
     
     //imagesArray = [[NSMutableArray alloc] init];
     timelineArray = [[NSMutableArray alloc] init];
@@ -40,7 +38,9 @@
     
 }
 
-
+/**
+ Method to get timeline tweets. This method uses STTwitterAPI
+ */
 - (void) getTweets
 {
     STTwitterAPI *twitter = [STTwitterAPI twitterAPIAppOnlyWithConsumerKey:@"XpOjuLxOtj2D4t2PLNSyDzz3X" consumerSecret:@"Qdxq5oUg4qeU27FonG1KtS4FYG6JAXbLp0Q6h7m2I7Ja70FLV3"];
@@ -80,6 +80,9 @@
      }];
 }
 
+/**
+ Method to download images asynchronously. This method makes a call to retrieveImage of WebServiceClient
+ */
 - (void) getImages
 {
     for(int i=0; i < timelineArray.count; i++)
@@ -159,6 +162,9 @@
     CustomTableCell *cCell = (CustomTableCell *) cell;
     
     //cCell.accessoryView = spinner;
+    spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    //spinner.frame = CGRectMake(0, 0, 24, 24);
+    spinner.center = cCell.imageOutlet.center;
     [cCell addSubview:spinner];
     [spinner startAnimating];
     
@@ -188,7 +194,9 @@
     return cell;
 }
 
-
+/**
+ Sorts the table rows either alphabetically or based on time of creation
+ */
 - (IBAction)sort:(id)sender {
     
     

@@ -17,15 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username of the timeline to retrieve" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tt7-R6-BkW">
-                                <rect key="frame" x="20" y="319" width="335" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username of the Timeline" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tt7-R6-BkW">
+                                <rect key="frame" x="16" y="141" width="280" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="N5W-sj-l9n"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77c-rf-82l">
-                                <rect key="frame" x="137" y="377" width="100" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get the Latest 10 Tweets of the Timeline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFK-WS-nwl">
+                                <rect key="frame" x="16" y="103" width="276" height="18"/>
                                 <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77c-rf-82l">
+                                <rect key="frame" x="91" y="204" width="131" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="oAW-KC-mL7"/>
+                                </constraints>
                                 <state key="normal" title="Show Timeline"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="timelineSegue" id="mzO-bR-3RI"/>
@@ -35,23 +48,25 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="77c-rf-82l" firstAttribute="top" secondItem="Tt7-R6-BkW" secondAttribute="bottom" constant="28" id="1XL-b6-9i6"/>
-                            <constraint firstItem="77c-rf-82l" firstAttribute="centerX" secondItem="Wa3-nQ-VSG" secondAttribute="centerX" id="4yF-Gb-RbR"/>
-                            <constraint firstItem="Tt7-R6-BkW" firstAttribute="trailing" secondItem="Wa3-nQ-VSG" secondAttribute="trailingMargin" id="6Wg-wx-uov"/>
-                            <constraint firstItem="Tt7-R6-BkW" firstAttribute="centerY" secondItem="Wa3-nQ-VSG" secondAttribute="centerY" id="Mat-qr-B2X"/>
-                            <constraint firstItem="Tt7-R6-BkW" firstAttribute="leading" secondItem="Wa3-nQ-VSG" secondAttribute="leadingMargin" id="pkZ-PN-Epi"/>
+                            <constraint firstItem="77c-rf-82l" firstAttribute="top" secondItem="Tt7-R6-BkW" secondAttribute="bottom" constant="33" id="CKW-7G-eyU"/>
+                            <constraint firstItem="pFK-WS-nwl" firstAttribute="leading" secondItem="Wa3-nQ-VSG" secondAttribute="leadingMargin" id="FgW-pW-bO7"/>
+                            <constraint firstItem="Tt7-R6-BkW" firstAttribute="leading" secondItem="Wa3-nQ-VSG" secondAttribute="leadingMargin" id="aD4-u4-Bdd"/>
+                            <constraint firstItem="77c-rf-82l" firstAttribute="leading" secondItem="Wa3-nQ-VSG" secondAttribute="leadingMargin" constant="75" id="cDJ-eN-srG"/>
+                            <constraint firstItem="pFK-WS-nwl" firstAttribute="top" secondItem="zgQ-cD-I0P" secondAttribute="bottom" constant="39" id="g63-zC-ZFg"/>
+                            <constraint firstItem="Tt7-R6-BkW" firstAttribute="top" secondItem="pFK-WS-nwl" secondAttribute="bottom" constant="20" id="jG1-rn-9wW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Twitter Profile" id="zIb-la-fD9"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="showTImelineButton" destination="77c-rf-82l" id="uTp-IE-4vM"/>
+                        <outlet property="showTimelineOutlet" destination="77c-rf-82l" id="fbi-9Y-Awm"/>
                         <outlet property="usernameTextField" destination="Tt7-R6-BkW" id="c0a-kH-6Na"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yr6-DN-cAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282.5" y="303.5"/>
+            <point key="canvasLocation" x="281.5" y="302.5"/>
         </scene>
         <!--Timeline-->
         <scene sceneID="tne-QT-ifu">
@@ -86,9 +101,9 @@
                                                             <animations/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Sample Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBr-8w-g3p">
-                                                            <rect key="frame" x="180" y="35" width="175" height="19.5"/>
+                                                            <rect key="frame" x="180" y="38" width="175" height="15"/>
                                                             <animations/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>

@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _showTimelineOutlet.layer.cornerRadius = 5;
+    _showTimelineOutlet.layer.borderWidth = 1;
+    _showTimelineOutlet.layer.borderColor = [UIColor blackColor].CGColor;
 }
 
 
@@ -28,6 +32,14 @@
     {
         ViewController *vc = [segue destinationViewController];
         [vc setUsername:_usernameTextField.text];
+    }
+}
+
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch * touch = [touches anyObject];
+    if(touch.phase == UITouchPhaseBegan) {
+        [self.usernameTextField resignFirstResponder];
     }
 }
 

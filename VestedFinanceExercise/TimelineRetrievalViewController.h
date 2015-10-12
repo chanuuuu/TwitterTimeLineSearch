@@ -11,6 +11,7 @@
 @interface TimelineRetrievalViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UIButton *showTimelineOutlet;
 
 @property (weak, nonatomic) IBOutlet UIButton *showTImelineButton;
 
